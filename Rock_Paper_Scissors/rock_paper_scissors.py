@@ -40,7 +40,7 @@ def prc():
     
     
     
-#function call (assuming that first argument is from player 1 and second is from player 2)
+#function call
 prc()
 
-##Yadav, Anil (Coppin State University)
+#Yadav, Anil (Coppin State University)
