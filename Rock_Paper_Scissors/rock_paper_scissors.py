@@ -14,7 +14,7 @@ def prc():
     print()
 
   #availabe array data for comparisons
-    data = [("PR","Paper cuts rock"),("RS","Rock breaks scissors"),("SP","Scissors cut paper")]
+    data = [("PR","Paper covers rock"),("RS","Rock breaks scissors"),("SP","Scissors cut paper")]
   
   #initialze exception case first
     winner = False
