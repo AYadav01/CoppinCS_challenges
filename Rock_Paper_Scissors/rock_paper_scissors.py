@@ -1,3 +1,5 @@
+import random
+
 def prc():
     
     print("Welocm to Rock, Paper, Scissors Game !")
@@ -8,14 +10,28 @@ def prc():
     
     #(note the user can put just the initials or the entire move)
     arg_a = str(input("Enter your move (Options: Rock, Paper, Scissors): "))
-    
-    player_b_name = str(input("Player 2 name: "))
-    arg_b = str(input("Enter your move (Options: Rock, Paper, Scissors): "))
     print()
-
-  #availabe array data for comparisons
+    
+    #default name
+    player_b_name = "Computer"
+    
+    mySet = set()
+    
+    #availabe array data for comparisons
     data = [("PR","Paper covers rock"),("RS","Rock breaks scissors"),("SP","Scissors cut paper")]
-  
+    
+    
+    # making a set of unique items from above data (keywords are converted into ASCII representation and stored)
+    for everyData in data:
+        mySet.add(ord(everyData[0][1:]))
+        mySet.add(ord(everyData[0][:1]))
+    
+    #choosing random integer based on the set that we produced above (we convert it back to character)
+    arg_b = chr(random.choice(list(mySet)))
+                     
+    print("{0} chooses: {1}".format(player_b_name, arg_b))
+    print()
+    
   #initialze exception case first
     winner = False
   
@@ -38,9 +54,5 @@ def prc():
     if winner is not True:
         print("No one won :-)")
     
-    
-    
 #function call
 prc()
-
-#Yadav, Anil (Coppin State University)
