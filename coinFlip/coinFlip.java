@@ -7,7 +7,6 @@ import java.util.Random;
 public class coinFlip {
 
 	public static void main(String[] args) {
-		
 		//random number object
 		Random rand = new Random();
 		
@@ -17,14 +16,13 @@ public class coinFlip {
 		//the range of random numbers
 		int maxRandom = 84;
 		int minRandom = 72;
-		
+	
 		//threshold point; if number below threshold, it will be assigned 'H' else 'T'
 		int threshold = (maxRandom+minRandom)/2;
-		
-		
+
 		//number of iterations
 		int num = 100;
-		
+
 		//head and tail counter
 		int headCount = 0;
 		int tailCount = 0;
@@ -33,12 +31,9 @@ public class coinFlip {
 		ArrayList<Character> myList = new ArrayList<Character>();
 		
 		//gathering data
-		for (int i = 0; i < num; i++) {
-			
+		for (int i = 0; i < num; i++) {	
 			randomNumber = rand.nextInt(maxRandom - minRandom + 1) + minRandom;
-			
 			if( randomNumber <= threshold ) {
-				
 				//add 'H' to the arrayList. (72 is the ASCII representation of H)
 				myList.add((char)72);
 				headCount++;
@@ -49,7 +44,6 @@ public class coinFlip {
 				myList.add((char)84);
 				tailCount ++;
 			}	
-			
 			//System.out.println("The random number is "+ randomNumber);
 		}
 		
@@ -64,6 +58,5 @@ public class coinFlip {
 		System.out.println();
 		System.out.println("Head percentage "+percentHead+"%");
 		System.out.println("Tail percentage "+percentTail+"%");
-		
 	}
 }
