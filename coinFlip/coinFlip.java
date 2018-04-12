@@ -1,15 +1,13 @@
 //Yadav, Anil (Coppin State University)
-
 //package coinFlip;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class coinFlip {
-
 	public static void main(String[] args) {
 		//random number object
 		Random rand = new Random();
-		
+
 		//this variable will hold the generated random number
 		int randomNumber;
 		
@@ -37,8 +35,7 @@ public class coinFlip {
 				//add 'H' to the arrayList. (72 is the ASCII representation of H)
 				myList.add((char)72);
 				headCount++;
-			}
-			
+			}	
 			else {
 				//add 'T' to the arrayList; (84 is the ASCII representation of T)
 				myList.add((char)84);
@@ -46,7 +43,6 @@ public class coinFlip {
 			}	
 			//System.out.println("The random number is "+ randomNumber);
 		}
-		
 		//calculating percentage
 		double percentHead = (double)(headCount*100)/num;
 		double percentTail = (double)(tailCount*100)/num;
