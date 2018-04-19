@@ -18,14 +18,14 @@ def profanity(text):
         for everyText in data:
         #comparing if profance data words exits in 'newText' list
             status = everyText.upper() in everyItem.upper()
-            #if True (We find the word)
+            #if True (We find the word in the list)
             if status:
          	#flow control; makes sure that the length of current word is same as that of a profane word
                 if len(everyText) == len(everyItem):
                     mark.append(index)
-                #if length doen't matche by 1 character, the profane word might have colon, semicolon, commas, or period in the end.
-                #it is marked if that is the case too
-                elif (len(everyItem) == len(everyText)+1) and everyItem[-1] in ";,: ":
+                #if length doen't match by 1 or 2 character at most, the word in the list might have colon, semicolon, commas, or period in the end.
+                #it is marked profene as well if that is the case
+                elif len(everyItem) == len(everyText)+1 or len(everyItem) == len(everyText)+2 and everyItem[-1] in ";,: ":
                     mark.append(index)
         index += 1
         
