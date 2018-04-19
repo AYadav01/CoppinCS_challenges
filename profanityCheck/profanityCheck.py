@@ -1,13 +1,13 @@
+global data #global variable data
+data = ["cat", "lama", "dog", "cow"] #list of profane words for comparison
+
 def profanity(text):
 
     #we split the input text by a space
     newText = text.split(" ")
 
     #This will be either True of False depending on whether we find profance words (initialized with None)
-    status = None 
-
-    #list of profane words for comparison
-    data = ["cat", "lama", "dog", "cow"]
+    status = None
     
     #this array will hold the index number of the profance words, if we find any, present in the 'newText' list
     mark = []
@@ -16,11 +16,11 @@ def profanity(text):
     #get the index value of the profane words 
     for everyItem in newText:
         for everyText in data:
-        	#comparing if profance data words exits in 'newText' list
+        #comparing if profance data words exits in 'newText' list
             status = everyText.upper() in everyItem.upper()
             #if True (We find the word)
             if status:
-         		#flow control; makes sure that the length of current word is same as that of a profane word
+         	#flow control; makes sure that the length of current word is same as that of a profane word
                 if len(everyText) == len(everyItem):
                     mark.append(index)
                 #if length doen't matche by 1 character, the profane word might have colon, semicolon, commas, or period in the end.
@@ -40,7 +40,11 @@ def profanity(text):
         print(everyItem, "", end= "")
 
 #function call
-_ = input("Enter sentence for profanity check (checking for 'cat'): ")
-profanity(_)
+print("The profane words being checked are: {}".format(data))
+_ = input("Enter sentence for profanity check: ")
+if _:
+	profanity(_)
+else:
+	print("Please provide an input for checking!")
 
 #Yadav, Anil (Coppin State University)
