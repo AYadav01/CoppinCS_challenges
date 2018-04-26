@@ -14,13 +14,11 @@ def makeBrick(available_big_bricks, available_small_bricks, goal):
       #if required bigger bricks are less than or equal to available bricks
       if required_big_bricks <= available_big_bricks:
 
-        #check if length of required bricks takes us to the goal, return True if yes
+        #check if length of required bricks reaches the goal, return True if yes
         if (step_size_big*required_big_bricks) == goal:
           return not found
-
         else:
-
-          #if we dont find the goal, find the required distance remaining to reach the goal
+          #if we dont find the goal, find the distance remaining to reach the goal
           inch_covered_big = goal-(step_size_big*required_big_bricks)
 
           #if the remaining distance could be covered by smaller bricks, return True/False
@@ -41,7 +39,7 @@ def makeBrick(available_big_bricks, available_small_bricks, goal):
       #find the required number of smaller bricks
       required_small_bricks = goal//step_size_small
 
-      #check if required is less than or equal to availabe smaller bricks
+      #check if required number of smalle bricks is less than or equal to availabe smaller bricks
       if required_small_bricks <= available_small_bricks:
         if (step_size_small*required_small_bricks) == goal:
           return not found #returns True
@@ -54,7 +52,7 @@ def makeBrick(available_big_bricks, available_small_bricks, goal):
     else:
       return "Enter a valid input!"
 
-#calculates if the required distance could be replace by smaller bricks
+#calculates if the required distance could be covered by smaller bricks
 def small_calcualate(incoming_distance, step_size_small, available_small_bricks):
   if incoming_distance//step_size_small <= available_small_bricks:
     return not found
