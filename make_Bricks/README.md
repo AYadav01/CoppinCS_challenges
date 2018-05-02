@@ -1,4 +1,4 @@
-# CoppinCS Challenge (makeBricks challenge)
+# CoppinCS Challenge (makeBricks)
 
 Problem Statement:
 ---
