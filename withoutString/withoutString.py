@@ -14,6 +14,7 @@ print(withoutString_1("Hello there", "e"))
 
 #second function to acheive the same effect
 def withoutString_2(base, remove):
+	
   if remove in base:
     newString = base.replace(remove,"")
     
