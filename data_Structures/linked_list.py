@@ -27,6 +27,14 @@ class Linked_List(object):
 			elem.append(cur.value)
 		return elem
 
+#linked_list_instance
+my_list = Linked_List()
+#add data
+for i in range(2,7):
+	my_list.add_node(i)
+#prit the list
+print(my_list.print_list())
+
 
 
 
