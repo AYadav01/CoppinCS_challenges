@@ -57,7 +57,6 @@ def high_and_low(num):
   sorted_list = sorted(my_list)
   for num in sorted_list:
     lowNum += num
-
   return (int(highNum), int(lowNum)) #return the tuple value
  
 #main function 
