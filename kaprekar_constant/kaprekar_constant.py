@@ -41,7 +41,6 @@ def kaprekarsConstant(num, tracker):
     #break case
     return tracker
   
-
 #this function return a tuple of two digits: one arranged in ascending and the other
 #in descending order
 def high_and_low(num):
